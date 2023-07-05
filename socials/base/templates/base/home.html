@@ -161,15 +161,18 @@
                         
                       </span>
 
-                  </div>
-                  {% if post.image %}
-                  <div class="photo">
-                    <a href="{{ post.image.url }}">
-                      <img src="{{ post.image.url }}" alt="feed-1" style="height: 450px;">
-                    </a>
-                  </div>
-                {% endif %}
-                
+                      {% if post.image and post.image.url %}
+                      <div class="photo">
+                        <a href="{{ post.image.url }}">
+                          <img src="{{ post.image.url }}" alt="feed-1" style="height: 450px;">
+                        </a>
+                      </div>
+                    {% else %}
+                      <div class="photo">
+                        No image available
+                      </div>
+                    {% endif %}
+                    
                   <div class="action-buttons">
                       <div class="interaction-buttons">
                         <!-- Like post -->
