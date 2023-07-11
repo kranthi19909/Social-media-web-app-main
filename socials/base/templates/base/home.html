@@ -159,19 +159,25 @@
                             </ul>
                           <!-- </i> -->
                         
-                      </span>
-                   </div>
+                  <div class="span">
+  <!-- Content within the span div -->
+</div>
+
 {% if post.image and post.image.url %}
 <div class="photo">
   <a href="{{ post.image.url }}">
-    <img src="{{ post.image.url }}" alt="feed-1" style="height: 450px;">
+    <img src="{{ post.image.url }}" alt="feed-1" class="img-fluid" style="max-height: 450px;">
   </a>
-  <a href="{{ post.image.url }}" class="flex items-center space-x-2 flex-1 justify-end" style="text-decoration: none;" download>Download</a>
+  <a href="{{ post.image.url }}" class="d-flex justify-content-end" style="text-decoration: none;" download>Download</a>
 </div>
 {% endif %}
 
-                  <div class="action-buttons">
-                      <div class="interaction-buttons">
+<div class="action-buttons">
+  <div class="interaction-buttons">
+    <!-- Content within the interaction-buttons div -->
+  </div>
+</div>
+
                         <!-- Like post -->
                              <a href="/like-post?post_id={{post.id}}" style="text-decoration: none;">
                               <i class="fa-solid fa-heart" id="heart" ></i>  
