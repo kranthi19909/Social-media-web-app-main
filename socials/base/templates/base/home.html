@@ -178,8 +178,6 @@
   </div>
 </div>
 
-
-
 <!-- Like post -->
 <a href="/like-post?post_id={{ post.id }}" style="text-decoration: none;">
   <i class="fa-solid fa-heart" id="heart"></i>
@@ -187,8 +185,6 @@
 <a href="{% url 'add_comment' post.pk %}" style="color: #000;">
   <span><i class="uil uil-comment-dots"></i></span>
 </a>
-</div>
-
 
 <!-- Downloading the post image -->
 <a href="{{ post.image.url }}" class="flex items-center space-x-2 flex-1 justify-end" style="text-decoration: none;" download>
