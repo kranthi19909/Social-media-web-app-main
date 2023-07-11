@@ -159,16 +159,16 @@
                             </ul>
                           <!-- </i> -->
                         
-                  <div class="span">
+<div class="span">
   <!-- Content within the span div -->
 </div>
 
 {% if post.image and post.image.url %}
 <div class="photo">
   <a href="{{ post.image.url }}" class="flex items-center space-x-2 flex-1 justify-end" style="text-decoration: none;" download>
-  <!-- Content within the <a> element -->
-</a>
-
+    <img src="{{ post.image.url }}" alt="feed-1" class="img-fluid" style="max-height: 450px;">
+  </a>
+</div>
 {% endif %}
 
 <div class="action-buttons">
@@ -176,6 +176,7 @@
     <!-- Content within the interaction-buttons div -->
   </div>
 </div>
+
 
                         <!-- Like post -->
                              <a href="/like-post?post_id={{post.id}}" style="text-decoration: none;">
