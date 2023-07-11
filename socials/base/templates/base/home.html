@@ -164,11 +164,12 @@
 </div>
 
 {% if post.image and post.image.url %}
-<div class="photo">
-  <a href="{{ post.image.url }}" class="flex items-center space-x-2 flex-1 justify-end" style="text-decoration: none;" download>
-    <img src="{{ post.image.url }}" alt="feed-1" class="img-fluid" style="max-height: 450px;">
-  </a>
-</div>
+  {% url_load post_image_url=post.image.url %}
+  <div class="photo">
+    <a href="{{ post_image_url }}" class="flex items-center space-x-2 flex-1 justify-end" style="text-decoration: none;" download>
+      <img src="{{ post.image.url }}" alt="feed-1" class="img-fluid" style="max-height: 450px;">
+    </a>
+  </div>
 {% endif %}
 
 <div class="action-buttons">
@@ -176,6 +177,7 @@
     <!-- Content within the interaction-buttons div -->
   </div>
 </div>
+
 
 
                         <!-- Like post -->
